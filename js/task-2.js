@@ -1,4 +1,20 @@
 function calcAverageCalories(days){
+  let valueCal = []; 
+   let averageCal = 0;
+  
+  for (const cal of days) {
+    valueCal.push(cal.calories);
+  }
+
+  if (valueCal.length === 0 ) {
+    return 0;
+  }
+
+  for (let i = 0; i < valueCal.length; i++){
+    averageCal += valueCal[i];
+  }
+
+  return averageCal / valueCal.length;
 
 }
 
@@ -30,3 +46,7 @@ console.log(
 console.log(
   calcAverageCalories([])
 ); // 0
+
+
+
+
